@@ -9,10 +9,7 @@ import {
   ScrollView,
   TouchableOpacity
 } from "react-native";
-import Constants from "expo-constants";
 const { width, height } = Dimensions.get("window");
-// or any pure javascript modules available in npm
-import { Card } from "react-native-paper";
 
 const OFFSET = 200;
 
@@ -29,7 +26,6 @@ export default class FlatListUI extends React.Component {
 
   animateHandler = e => {
     const yOffset = e.nativeEvent.contentOffset.y;
-    console.log(yOffset);
     this.setState({
       shouldAnimate: true,
       lastOffsetY: yOffset
@@ -41,7 +37,7 @@ export default class FlatListUI extends React.Component {
     return (
       <ScrollView
         style={styles.flatlist}
-        scrollEventThrottle={8}
+        scrollEventThrottle={16}
         showsVerticalScrollIndicator={false}
         onScrollBeginDrag={e => this.animateHandler(e)}
       >
