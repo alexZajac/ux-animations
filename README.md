@@ -1,1 +1,1 @@
-**ux-animations** - A smal collection of animations made in React native
+**ux-animations** - A small collection of animations made in React native
